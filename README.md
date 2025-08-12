@@ -30,7 +30,7 @@
     ```
 4.  **npm 패키지 설치**
     ```bash
-    sudo npm install electron-builder cross-env electron-notarize --save-dev --legacy-peer-deps
+    sudo npm install -g electron-builder cross-env electron-notarize yarn --save-dev --legacy-peer-deps
     ```
 5.  **`package.json` 파일 수정**
     ```bash
@@ -40,15 +40,26 @@
     ```json
     "dist:linux": "electron-builder --linux",
     ```
-6.  **세팅하기**
+5.  **`notarize_app.js` 파일 수정**
+    ```bash
+    nano /scripts/notarize_app.js
+    ```
+    파일을 열고, 첫번째 줄에 다음 내용을 추가하세요.
+    ```js
+    if(process.platform !== 'darwin') {
+        return;
+    }
+    ```
+    
+7.  **세팅하기**
     ```bash
     npm run dist:linux
     ```
-7.  **빌드하기**
+8.  **빌드하기**
     ```bash
     electron-builder --linux
     ```
-8.  **권한 부여 & 실행**
+9.  **권한 부여 & 실행**
     ```bash
     sudo chmod +x /dist/*.AppImage
     sudo ./dist/*.AppImage
