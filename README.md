@@ -7,64 +7,15 @@
 이 가이드는 **Ubuntu 20.04 이상** 버전을 기준으로 작성되었습니다.
 
 ### **설치 요구사항**
+> 1GB의 여유 공간
+> 전원(선택)
 
-  - **네트워크** 연결
-  - **10GB 이상의 여유 공간**
-  - 전원 (선택)
-
------
-
-### **빌드 설치 가이드**
-
-1.  **패키지 목록 업데이트**
-    ```bash
-    sudo apt update
-    ```
-2.  **필수 패키지 설치**
-    ```bash
-    sudo apt install build-essential clang libdbus-1-dev libgtk-3-dev libnotify-dev libasound2-dev libcap-dev libcups2-dev libxtst-dev libxss1 libnss3-dev gcc-multilib g++-multilib libusb-1.0-0-dev curl gperf bison python3-dbusmock openjdk-8-jre git nodejs npm -y
-    ```
-3.  **엔트리 빌드 파일 가져오기**
-    ```bash
-    git clone https://github.com/entrylabs/entry-offline.git && cd entry-offline
-    ```
-4.  **npm 패키지 설치**
-    ```bash
-    sudo npm install -g electron-builder cross-env electron-notarize yarn --save-dev --legacy-peer-deps
-    ```
-5.  **`package.json` 파일 수정**
-    ```bash
-    nano package.json
-    ```
-    파일을 열고, `"dist:mac": ...` 아래에 다음 내용을 추가하세요.
-    ```json
-    "dist:linux": "cross-env NODE_ENV=production node --openssl-legacy-provider ./node_modules/webpack/bin/webpack.js && electron-builder --linux",
-    ```
-5.  **`notarize_app.js` 파일 수정**
-    ```bash
-    nano /scripts/notarize_app.js
-    ```
-    파일을 열고, 첫번째 줄에 다음 내용을 추가하세요.
-    ```js
-    if(process.platform !== 'darwin') {
-        return;
-    }
-    ```
-    
-7.  **세팅하기**
-    ```bash
-    npm run dist:linux
-    ```
-8.  **빌드하기**
-    ```bash
-    electron-builder --linux # 빌드에는 꽤 많은 시간이 걸립니다.
-    ```
-    
-    ```bash
-    sudo chmod +x /dist/*.AppImage
-    sudo ./dist/*.AppImage
-    ```
-    이제 엔트리 오프라인 프로그램이 실행됩니다.
+### **설치 방법**
+1. [릴리즈 메뉴](https://github.com/ijastor/entry-offline_linux/releases/tag/Entry)에 들어가 `Entry-2.1.29.AppImage`를 다운받습니다.
+2. 다운로드 한 위치에서 터미널을 열고, 아래의 명령어를 입력 합니다.
+```bash
+./Entry-2.1.29.AppImage --no-sandbox
+```
 
 -----
 
