@@ -38,7 +38,7 @@
     ```
     파일을 열고, `"dist:mac": ...` 아래에 다음 내용을 추가하세요.
     ```json
-    "dist:linux": "electron-builder --linux",
+    "dist:linux": "cross-env NODE_ENV=production node --openssl-legacy-provider ./node_modules/webpack/bin/webpack.js && electron-builder --linux",
     ```
 5.  **`notarize_app.js` 파일 수정**
     ```bash
@@ -57,9 +57,9 @@
     ```
 8.  **빌드하기**
     ```bash
-    electron-builder --linux
+    electron-builder --linux # 빌드에는 꽤 많은 시간이 걸립니다.
     ```
-9.  **권한 부여 & 실행**
+    
     ```bash
     sudo chmod +x /dist/*.AppImage
     sudo ./dist/*.AppImage
