@@ -22,7 +22,7 @@
     ```
 2.  **필수 패키지 설치**
     ```bash
-    sudo apt install build-essential clang libdbus-1-dev libgtk-3-dev libnotify-dev libasound2-dev libcap-dev libcups2-dev libxtst-dev libxss1 libnss3-dev gcc-multilib g++-multilib libusb-1.0.0-dev curl gperf bison python3-dbusmock openjdk-8-jre git nodejs npm -y
+    sudo apt install build-essential clang libdbus-1-dev libgtk-3-dev libnotify-dev libasound2-dev libcap-dev libcups2-dev libxtst-dev libxss1 libnss3-dev gcc-multilib g++-multilib libusb-1.0-0-dev curl gperf bison python3-dbusmock openjdk-8-jre git nodejs npm -y
     ```
 3.  **엔트리 빌드 파일 가져오기**
     ```bash
