@@ -30,7 +30,7 @@
     ```
 4.  **npm 패키지 설치**
     ```bash
-    npm install -g electron-builder cross-env
+    sudo npm install electron-builder cross-env --save-dev --legacy-peer-deps
     ```
 5.  **`package.json` 파일 수정**
     ```bash
@@ -38,7 +38,7 @@
     ```
     파일을 열고, `"dist:mac": ...` 아래에 다음 내용을 추가하세요.
     ```json
-    "dist:linux": "electron-builder --linux"
+    "dist:linux": "electron-builder --linux",
     ```
 6.  **세팅하기**
     ```bash
