@@ -30,7 +30,7 @@
     ```
 4.  **npm 패키지 설치**
     ```bash
-    sudo npm install electron-builder cross-env --save-dev --legacy-peer-deps
+    sudo npm install electron-builder cross-env electron-notarize --save-dev --legacy-peer-deps
     ```
 5.  **`package.json` 파일 수정**
     ```bash
