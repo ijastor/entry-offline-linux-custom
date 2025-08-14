@@ -3,7 +3,7 @@
 # Entry Offline - Linux 설치 가이드
 
 ## 리눅스용 엔트리 오프라인 프로그램
-
+***이 프로그램은 entry-offline (Entry Labs, Apache 2.0)를 기반으로 제작한 비공식 프로그램 입니다.***  
 ### **설치 요구사항**
 > 1GB의 여유 공간  
 > 전원(선택)
@@ -14,4 +14,13 @@
 ```bash
 ./Entry-2.1.29.AppImage --no-sandbox
 ```
+-----
+## Copyright and License
 
+Entry-Offline Copyright(c) 2018 CONNECT.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
