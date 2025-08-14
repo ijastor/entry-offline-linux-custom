@@ -3,7 +3,7 @@
 # Entry Offline - Linux 설치 가이드
 
 ## 리눅스용 엔트리 오프라인 프로그램
-***이 프로그램은 entry-offline (Entry Labs, Apache 2.0)를 기반으로 제작한 비공식 프로그램 입니다.***  
+***이 프로그램은 [entry-offline](https://github.com/entrylabs/entry-offline) (Entry Labs, Apache 2.0)를 기반으로 제작한 비공식 프로그램 입니다.***  
 ### **설치 요구사항**
 > 1GB의 여유 공간  
 > 전원(선택)
