@@ -12,6 +12,7 @@
 1. [릴리즈 메뉴](https://github.com/ijastor/entry-offline_linux/releases/tag/Entry)에 들어가 `Entry-2.1.29.AppImage`를 다운받습니다.
 2. 다운로드 한 위치에서 터미널을 열고, 아래의 명령어를 입력 합니다.
 ```bash
+chmod a+x Entry-2.1.29.AppImage
 ./Entry-2.1.29.AppImage --no-sandbox
 ```
 -----
